@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #006699;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 30px;
+}
+
+section.programas ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.redes {
+  margin-top: 10px;
+}
+
+.redes a {
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.redes img {
+  vertical-align: middle;
+}
+
