@@ -1,61 +1,50 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f9fc;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', sans-serif; color:#333; }
+a { text-decoration:none; }
 
-header {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.hero {
+  background: linear-gradient(135deg, #b30000 50%, #ff4d4d 50%);
+  color:white; padding:60px 20px; text-align:center; position:relative;
 }
+.hero::after {
+  content:'';
+  position:absolute; bottom:0; left:0; width:100%; height:60px;
+  background:#fff; border-radius:50% 50% 0 0;
+}
+.hero-content { position:relative; z-index:1; max-width:700px; margin:0 auto; }
+.hero h1 { font-size:2.5em; margin-bottom:20px; }
+.btn-primary {
+  background:#25D366; color:#fff; padding:12px 30px;
+  border-radius:30px; font-size:1.1em; display:inline-block;
+  margin-top:20px; transition:0.3s; }
+.btn-primary:hover { background:#1eb851; transform:scale(1.05); }
 
-nav {
-  background-color: #006699;
-  text-align: center;
-  padding: 10px;
+.beneficios {
+  display:flex; gap:20px; padding:60px 20px;
+  max-width:1000px; margin:0 auto;
+  flex-wrap:wrap; text-align:center;
 }
+.card {
+  background:#fff; flex:1; min-width:250px;
+  border-radius:12px; padding:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.card img { width:80px; margin-bottom:15px; }
+.card h3 { margin-bottom:10px; color:#b30000; }
+.card p { font-size:0.95em; line-height:1.5; }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 30px;
-}
-
-section.programas ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
+.directora { padding:60px 20px; text-align:center; background:#ffe6e6; }
+.directora img { width:200px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
 
 footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 15px;
+  background:#fff; padding:30px 20px; text-align:center;
+  border-top:1px solid #eee;
 }
+.social { display:flex; gap:15px; justify-content:center; margin-bottom:10px; }
+.social img { width:40px; transition:transform 0.3s; }
+.social img:hover { transform:scale(1.2); }
 
-.redes {
-  margin-top: 10px;
-}
-
-.redes a {
-  margin: 0 8px;
-  display: inline-block;
-}
-
-.redes img {
-  vertical-align: middle;
+@media (max-width:800px) {
+  .beneficios { flex-direction:column; }
 }
 
