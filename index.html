@@ -2,19 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Escuela de Coaching</title>
+  <title>Alba Training School</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- HERO -->
   <header class="hero">
+    <div class="logos-superiores">
+      <img src="images/logo1.png" alt="Logo 1">
+      <img src="images/logo2.png" alt="Logo 2">
+      <img src="images/logo3.png" alt="Logo 3">
+      <img src="images/logo4.png" alt="Logo 4">
+    </div>
     <div class="hero-content">
-      <h1>Formate como Coach Profesional</h1>
-      <p>Nuestra carrera está <strong>avalada por la Global Coaching Federation</strong>. 100% online.</p>
+      <h1>Alba Training School</h1> Formate como Coach Profesional</h1>
+      <p>Nuestra carrera está <strong>avalada por la Global Coaching Federation</strong>. 100% online, a tu ritmo.</p>
       <a href="https://wa.me/549XXXXXXXXXX" class="btn-primary">Inscribite ahora</a>
     </div>
   </header>
 
+  <!-- BENEFICIOS -->
   <section class="beneficios">
     <div class="card">
       <img src="images/equipo.png" alt="Trabajo en equipo">
@@ -33,18 +41,89 @@
     </div>
   </section>
 
+  <!-- DIRECTORA -->
   <section class="directora">
     <h2>Nuestra Directora</h2>
     <img src="images/directora.jpg" alt="Foto de la directora">
   </section>
 
+  <!-- TESTIMONIOS SLIDER -->
+  <section class="testimonios">
+    <h2>Lo que dicen nuestros alumnos</h2>
+    <div class="slider-testimonios">
+      <div class="slide active">
+        <p>"Gracias a esta formación me descubrí como líder. La transformación fue profunda y práctica."</p>
+        <h4>- Mariana G., Coach Profesional</h4>
+      </div>
+      <div class="slide">
+        <p>"Los talleres son dinámicos, reales y aplicables desde el primer día. ¡Superó mis expectativas!"</p>
+        <h4>- Juan P., Ex alumno</h4>
+      </div>
+      <div class="slide">
+        <p>"Me sentí acompañada todo el tiempo. El equipo humano es increíble."</p>
+        <h4>- Laura M., Coach Ejecutiva</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICACION -->
+  <section class="certificacion">
+    <h2>Certificación Internacional</h2>
+    <p>
+      Nuestra carrera está avalada por la <strong>Global Coaching Federation</strong>, lo que garantiza estándares de calidad y validez internacional.
+    </p>
+    <img src="images/certificacion.png" alt="Certificado avalado" class="logo-cert">
+  </section>
+
+  <!-- TALLERES -->
+  <section class="talleres">
+    <h2>Talleres que se dictan</h2>
+    <div class="talleres-grid">
+      <div class="taller">
+        <img src="images/taller1.jpg" alt="Coaching Ontológico">
+        <h3>Coaching Ontológico</h3>
+        <p>Transformación personal y comunicación efectiva.</p>
+        <a href="https://wa.me/549XXXXXXXXXX?text=Quiero%20inscribirme%20al%20taller%20de%20Coaching%20Ontológico" class="btn-inscripcion" target="_blank">Inscribirme</a>
+      </div>
+      <div class="taller">
+        <img src="images/taller2.jpg" alt="Liderazgo Consciente">
+        <h3>Liderazgo Consciente</h3>
+        <p>Herramientas para liderar con propósito.</p>
+        <a href="https://wa.me/549XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20taller%20de%20Liderazgo%20Consciente" class="btn-inscripcion" target="_blank">Inscribirme</a>
+      </div>
+      <div class="taller">
+        <img src="images/taller3.jpg" alt="PNL Aplicada">
+        <h3>PNL Aplicada</h3>
+        <p>Neuroprogramación para objetivos claros.</p>
+        <a href="https://wa.me/549XXXXXXXXXX?text=Me%20gustaría%20hacer%20el%20taller%20de%20PNL%20Aplicada" class="btn-inscripcion" target="_blank">Inscribirme</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="social">
       <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
       <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
     </div>
-    <p>© 2025 Escuela de Coaching</p>
+    <p>© 2025 Academia de Coaching</p>
   </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+    setInterval(showNextSlide, 5000);
+  </script>
 </body>
 </html>
