@@ -121,6 +121,11 @@ a {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.video-instagram {
+  max-width: 360px; /* o 320px, como prefieras */
+  margin: 0 auto;
+}
+
 
 /* TESTIMONIOS */
 .testimonios {
