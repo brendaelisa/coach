@@ -270,7 +270,7 @@ ul {
     object-fit: cover;
     /* Eliminamos margin-right porque ahora va debajo */
     margin-top: 20px; /* Espacio entre el título y la imagen */
-    margin-bottom: 30px; /* Espacio entre la imagen y el contenido del mensaje */
+    margin-bottom: 15px; /* Espacio entre la imagen y el contenido del mensaje */
     border: 5px solid var(--secondary-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
