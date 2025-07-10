@@ -413,50 +413,49 @@ ul {
 }
 
 /* Why Us Grid */
+/* Esto ya debería estar centrado si tienes 3 elementos en la grilla y usas justify-content: center */
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    justify-content: center; /* Esto centra las columnas de la grilla */
 }
 
+/* Modifica la regla para las cards individuales */
 .why-us-item {
-    background-color: var(--white);
+    background-color: var(--white-color);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Redondeo de las esquinas de la tarjeta */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    transition: transform 0.3s ease;
+
+    /* AÑADIR ESTO para centrar el contenido (imagen, título, párrafo) de cada card. */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos (incluida la imagen) horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos al inicio verticalmente */
 }
 
-.why-us-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.why-us-item i {
-    font-size: 3em;
-    color: var(--primary-color);
+/* Regla para las imágenes de Metodología y Docentes */
+.why-us-icon {
+    width: 150px; /* Tamaño que quieres para estas imágenes */
+    height: 150px; /* Importante que sea igual al width para un círculo perfecto */
     margin-bottom: 15px;
+    border-radius: 50%; /* ¡Esto las hará circulares! */
+    object-fit: cover; /* MUY IMPORTANTE: Recorta la imagen para que rellene el círculo */
+    border: 2px solid var(--primary-color); /* Opcional: un borde para que se destaque el círculo */
 }
 
-.why-us-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.3em;
-}
-
-.why-us-item p {
-    color: var(--light-text-color);
-    font-size: 0.95em;
-}
-
+/* Regla para el logo de Global Coaching Federation (la card "Aval Global") */
 .why-us-item .aval-logo {
-    width: 100px; /* Ajusta el tamaño del logo del aval */
-    height: auto;
+    width: 150px; /* Tamaño del logo GCF */
+    height: 150px; /* Importante que sea igual al width para un círculo perfecto */
     margin-bottom: 15px;
+    border-radius: 50%; /* ¡Esto lo hará circular! */
+    object-fit: contain; /* Para el logo GCF, 'contain' es mejor si tiene fondo transparente o espacio alrededor */
+    /* border: 2px solid var(--accent-color);  Opcional: un borde */
 }
-
 /* Testimonios Carousel (simplificado, se necesitaría JS para la funcionalidad completa) */
 .testimonials-carousel {
     display: flex;
