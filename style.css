@@ -172,7 +172,7 @@ ul {
 }
 
 .logo img {
-    height: 50px;
+    height: 65px; /* Aumentamos el tamaño del logo */
     max-width: 100%;
 }
 
@@ -256,7 +256,6 @@ ul {
 }
 
 .director-message .message-header {
-    /* Cambiado de flex con align-items: center; */
     display: flex;
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente en el contenedor */
@@ -268,23 +267,21 @@ ul {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    /* Eliminamos margin-right porque ahora va debajo */
     margin-top: 20px; /* Espacio entre el título y la imagen */
-    margin-bottom: 15px; /* Espacio entre la imagen y el contenido del mensaje */
+    margin-bottom: 10px; /* Reducimos el espacio entre la imagen y el mensaje */
     border: 5px solid var(--secondary-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .director-message h2 {
     color: var(--primary-color);
-    /* Mantener el tamaño para que se vea bien */
     font-size: 2.5em;
-    margin-bottom: 0; /* Asegura que no haya margen extra debajo del título antes de la imagen */
+    margin-bottom: 0;
 }
 
 .director-message .message-content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /* Mantener 0 auto para centrar horizontalmente */
     background-color: var(--background-light);
     padding: 40px;
     border-radius: 10px;
@@ -319,7 +316,6 @@ ul {
 
 
 /* Beneficios Grid (¿Qué es el Coaching Ontológico?) */
-/* Beneficios Grid (¿Qué es el Coaching Ontológico?) */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -350,28 +346,24 @@ ul {
 .benefit-item h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
-    /* --- INICIO DE CAMBIO PARA 'AUTOCONOCIMIENTO PROFUNDO' --- */
-    font-size: 1.4em; /* Slightly reduce font size for better fit */
-    /* Remove previous word-break properties that might not have looked good */
+    font-size: 1.4em;
     word-wrap: normal;
     overflow-wrap: normal;
     white-space: normal;
-    /* --- FIN DE CAMBIO --- */
 }
 
 .benefit-item p {
     color: var(--light-text-color);
     font-size: 0.95em;
 }
-/* Programas Grid */
+
 /* Programas Grid */
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
-    /* Añadido para centrar la única tarjeta cuando hay espacio */
-    justify-content: center;
+    justify-content: center; /* Centra la única tarjeta cuando hay espacio */
 }
 
 .program-card {
@@ -419,6 +411,7 @@ ul {
     margin-right: 10px;
     font-size: 1em;
 }
+
 /* Why Us Grid */
 .why-us-grid {
     display: grid;
@@ -559,6 +552,21 @@ ul {
     width: 100%;
     padding: 15px;
     font-size: 1.1em;
+}
+
+/* Estilos para el mensaje de confirmación del formulario */
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda; /* Un verde claro */
+    color: #155724; /* Texto verde oscuro */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Footer */
@@ -735,7 +743,7 @@ ul {
 
     .benefits-grid,
     .programs-grid,
-    .why-us-grid { /* Eliminamos .teachers-grid y .blog-grid */
+    .why-us-grid {
         grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
         margin-top: 30px;
     }
@@ -774,18 +782,6 @@ ul {
     .director-message p {
         font-size: 1em;
     }
-    .director-message .message-header {
-        flex-direction: column; /* Apila la foto y el título en pantallas pequeñas */
-        margin-bottom: 30px;
-    }
-    .director-message .director-photo {
-        margin-right: 0;
-        margin-bottom: 20px; /* Espacio debajo de la foto */
-    }
-    .director-message h2 {
-        font-size: 2em; /* Ajusta el tamaño del título en móvil */
-        text-align: center;
-    }
 }
 
 @media (max-width: 576px) {
@@ -803,5 +799,9 @@ ul {
 
     .contact-form {
         padding: 25px;
+    }
+
+    .logo img {
+        height: 55px; /* Ajuste para el logo en pantallas muy pequeñas */
     }
 }
