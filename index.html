@@ -197,18 +197,15 @@
     <div class="container">
         <h2>¡Empieza tu Viaje de Transformación Hoy con Alba Training School!</h2>
         <p>¿Listo para dar el siguiente paso? Contáctanos y te asesoraremos sin compromiso.</p>
-        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mkgbdjlv" method="POST">
-            <input type="text" id="nombre" name="Nombre" placeholder="Nombre Completo" required>
-            <input type="email" id="email" name="Email" placeholder="Correo Electrónico" required>
-            <input type="tel" id="telefono" name="Teléfono" placeholder="Número de Teléfono (opcional)">
-            <textarea id="mensaje" name="Mensaje" placeholder="Tu Mensaje / Consulta" rows="4"></textarea>
-            <button type="submit" class="btn btn-primary">Enviar Consulta</button>
-        </form>
-        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
-            <p>¡Gracias! Tu mensaje ha sido enviado.</p>
+       <section id="contacto" class="section cta-final">
+    <div class="container">
+        <h2>¡Empieza tu Viaje de Transformación Hoy con Alba Training School!</h2>
+        <p>¿Listo para dar el siguiente paso? Contáctanos y te asesoraremos sin compromiso.</p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7yvzO_MeXUVfSNcOGWEMUbhX91G7rGHVDCjeJVldfZwLnhQ/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </div>
-    </div>
 </section>
+    
 
     <footer class="footer">
         <div class="container">
@@ -255,15 +252,7 @@
                 navMenu.classList.remove('active');
             }
         });
-// Este script se mantiene, pero solo para mostrar el mensaje de "Gracias"
-// Formspree maneja el envío real del formulario sin necesidad de JavaScript adicional.
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
-    const confirmationMessageDiv = document.getElementById('confirmationMessage');
-    confirmationMessageDiv.style.display = 'block'; // Muestra el mensaje de "¡Gracias! Tu mensaje ha sido enviado."
 
-    // Opcional: limpiar el formulario después de mostrar el mensaje
-    this.reset();
-});
 </script>
 
 </body>
