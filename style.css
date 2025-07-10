@@ -251,24 +251,46 @@ ul {
 
 /* Mensaje de la Directora */
 .director-message {
-    background-color: var(--white); /* Fondo blanco para contraste */
+    background-color: var(--white);
     padding: 80px 20px;
+}
+
+.director-message .message-header {
+    /* Cambiado de flex con align-items: center; */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente en el contenedor */
+    margin-bottom: 40px;
+}
+
+.director-message .director-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Eliminamos margin-right porque ahora va debajo */
+    margin-top: 20px; /* Espacio entre el título y la imagen */
+    margin-bottom: 30px; /* Espacio entre la imagen y el contenido del mensaje */
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .director-message h2 {
     color: var(--primary-color);
-    margin-bottom: 40px;
+    /* Mantener el tamaño para que se vea bien */
+    font-size: 2.5em;
+    margin-bottom: 0; /* Asegura que no haya margen extra debajo del título antes de la imagen */
 }
 
 .director-message .message-content {
     max-width: 800px;
     margin: 0 auto;
-    background-color: var(--background-light); /* Fondo ligeramente gris para el mensaje */
+    background-color: var(--background-light);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: left;
-    position: relative; /* Para posibles elementos decorativos */
+    position: relative;
 }
 
 .director-message .message-content p {
@@ -288,7 +310,7 @@ ul {
     font-weight: 600;
     color: var(--primary-color);
     margin-top: 30px;
-    margin-bottom: 0; /* Eliminar margen inferior extra */
+    margin-bottom: 0;
 }
 
 .director-message .btn {
@@ -296,6 +318,7 @@ ul {
 }
 
 
+/* Beneficios Grid (¿Qué es el Coaching Ontológico?) */
 /* Beneficios Grid (¿Qué es el Coaching Ontológico?) */
 .benefits-grid {
     display: grid;
@@ -327,19 +350,28 @@ ul {
 .benefit-item h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
+    /* --- INICIO DE CAMBIO PARA 'AUTOCONOCIMIENTO PROFUNDO' --- */
+    font-size: 1.4em; /* Slightly reduce font size for better fit */
+    /* Remove previous word-break properties that might not have looked good */
+    word-wrap: normal;
+    overflow-wrap: normal;
+    white-space: normal;
+    /* --- FIN DE CAMBIO --- */
 }
 
 .benefit-item p {
     color: var(--light-text-color);
     font-size: 0.95em;
 }
-
+/* Programas Grid */
 /* Programas Grid */
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
+    /* Añadido para centrar la única tarjeta cuando hay espacio */
+    justify-content: center;
 }
 
 .program-card {
@@ -387,7 +419,6 @@ ul {
     margin-right: 10px;
     font-size: 1em;
 }
-
 /* Why Us Grid */
 .why-us-grid {
     display: grid;
@@ -455,15 +486,6 @@ ul {
     scroll-snap-align: start;
 }
 
-.testimonial-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid var(--primary-color);
-}
-
 .testimonial-card p {
     font-style: italic;
     color: var(--text-color);
@@ -476,102 +498,6 @@ ul {
     font-size: 1em;
 }
 
-/* Docentes Grid */
-.teachers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.teacher-card {
-    background-color: var(--white);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.teacher-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.teacher-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid var(--secondary-color);
-}
-
-.teacher-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.teacher-card p:first-of-type { /* Cargo/Título */
-    font-weight: 600;
-    color: var(--light-text-color);
-    font-size: 0.95em;
-    margin-bottom: 10px;
-}
-
-.teacher-card p { /* Biografía corta */
-    font-size: 0.9em;
-    color: var(--light-text-color);
-}
-
-/* Blog Grid */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.blog-post-card {
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    overflow: hidden; /* Para que la imagen no se salga del borde */
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-post-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.blog-post-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.blog-post-card h3 {
-    padding: 20px 20px 0;
-    color: var(--primary-color);
-    font-size: 1.3em;
-}
-
-.blog-post-card p {
-    padding: 0 20px 20px;
-    color: var(--light-text-color);
-    font-size: 0.9em;
-    flex-grow: 1;
-}
-
-.blog-post-card .btn {
-    margin: 0 20px 20px;
-    align-self: flex-start;
-}
 
 /* CTA Final / Contacto */
 .cta-final {
@@ -809,9 +735,7 @@ ul {
 
     .benefits-grid,
     .programs-grid,
-    .why-us-grid,
-    .teachers-grid,
-    .blog-grid {
+    .why-us-grid { /* Eliminamos .teachers-grid y .blog-grid */
         grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
         margin-top: 30px;
     }
@@ -849,6 +773,18 @@ ul {
     }
     .director-message p {
         font-size: 1em;
+    }
+    .director-message .message-header {
+        flex-direction: column; /* Apila la foto y el título en pantallas pequeñas */
+        margin-bottom: 30px;
+    }
+    .director-message .director-photo {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio debajo de la foto */
+    }
+    .director-message h2 {
+        font-size: 2em; /* Ajusta el tamaño del título en móvil */
+        text-align: center;
     }
 }
 
